@@ -1,0 +1,20 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "css/less",
+    "preprocessorScriptOutput": null,
+    "preprocessorStyleOutput": "css",
+    "projectName": "June",
+    "projectDescription": "meh",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "simple",
+    "useCompass": false,
+    "simpleModePartnerServer": "june.local:80",
+    "modelSource": null,
+    "domain": null
+}

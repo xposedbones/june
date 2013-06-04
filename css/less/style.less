@@ -1,0 +1,122 @@
+@import "_mixins";
+@import "_normalize";
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+	background: url("xv.png");
+	font-family: 'Titillium Web', sans-serif;
+}
+	.wrap{width: 600px; margin: 0 auto; text-align:center;}
+
+	h1{font-weight:200; font-size: 50px;color:#0866b4;}
+	p{color: #2f2f2f; font-size: 17px;}
+/* form
+=================================================================== */
+	form{
+		margin: 0 auto;
+		width: 100%;
+		padding: 20px;
+		background: #eee;
+		margin-top: 50px;
+		.border-radius(10px);
+		.quick-gradient(top,0.1);
+		.box-shadow-hex(0px,0px,400px,#fff);
+		border:2px solid #ccc;
+		input, textarea{
+			width: 100%;
+			height: 50px;
+			margin-bottom: 10px;
+			padding-left: 10px;
+			background: transparent;
+			.border-radius(5px);
+			outline:none;
+			-webkit-appearance:none;
+			border:none;
+			.box-shadow-in;
+			border-bottom: 1px solid #eee;
+		}
+		textarea{
+			max-width: 556px;
+			height: 200px;
+		}
+		button{
+			width: 100%;
+			background: transparent;
+			border: none;
+			height: 50px;
+			background: #fafafa;
+			.quick-gradient(top,0.2);
+			.boxshadow(0,0,5px,0,0.2);
+			.border-radius;
+			&:hover{
+				background: #fafafa;
+			}
+		}
+	}
+	::-webkit-input-placeholder {
+   color: #aaa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #aaa;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #aaa;  
+}
+
+:-ms-input-placeholder {  
+   color: #aaa;  
+}
+
+/* Message
+=================================================================== */
+	article{
+		p{margin-top:0;}
+		margin: 20px;
+		.content{
+			@articlebg: #ddd;
+			background: @articlebg;
+			display:inline-block;
+			width: 600px;
+			padding: 25px;
+			margin-bottom: 50px;
+			position: relative;		
+			.border-radius(15px);
+
+			&:before{
+				content:attr(data-author);
+				position:absolute;
+				bottom: -40px;
+				right: 20px;
+			}
+			&:after{ 
+				content:"";
+				.square(20px);
+				.rotate(45deg);
+				background: @articlebg;
+				position: absolute;
+				bottom: -10px;
+				right: 20px;
+				
+			}
+		}
+		.desc{
+			border-top: 1px solid #aaa;
+			padding-top: 10px;
+		}
+	}
+	@media (max-width: 980px) {
+		article{
+			width:100%;
+			margin:0px;
+			margin-bottom: 150px;
+			p,*{font-size: 70px;}
+			.content{
+				width:100%;
+				height: auto;
+				&:before{font-size: 40px; bottom: -100px;}
+				.desc{}
+			}
+		}
+	}
